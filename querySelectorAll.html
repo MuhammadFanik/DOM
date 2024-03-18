@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the method.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.querySelectorAll('.intro')
+        // Changing the color of all .intro elements
+        for(let i = 0; i < x.length; i++){
+            x[i].style.color = 'blue';
+        }
+    </script>
+</body>
+</html>

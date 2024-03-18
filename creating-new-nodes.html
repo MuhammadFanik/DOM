@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <div class="para1">This is a paragraph</div>
+        <div class="para2">This is an another paragraph</div>
+
+    </div>
+
+    <script>
+        // To add a new node you must create the element node first, and then append it to an existing element
+
+        // This creates a new p element
+        const para = document.createElement("p");
+
+        // To add text to this p element, we first create a text node
+        const node = document.createTextNode("This is the text inserted by using JS")
+
+        // Then you must append the text node inside the paragragh node
+        para.append(node)
+
+        // This code finds an existing element
+        const element = document.getElementById("div1")
+
+        // This code appends the new element to the existing element    
+        element.append(para)
+    </script>
+
+</body>
+</html>

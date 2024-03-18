@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heading">Favourite Movie Franchise</h1>
+        <ul>
+            <li class="list-items">The Matrix</li>
+            <li class="list-items">Stars Wars</li>
+            <li class="list-items">Harry Potter</li>
+            <li class="list-items">Lord of the Rings</li>
+            <li class="list-items">Marvel</li>
+        </ul>
+    </div>
+
+    <script>
+        const element1 =  document.querySelector('#main-heading')
+        element1.style.color = 'red';
+        console.log(element1);
+        
+        // Loop when using querySelectorAll to style elements
+        const element2 = document.querySelectorAll('.list-items')
+        for(let i = 0; i < element2.length; i++){
+            element2[i].style.fontSize = '2rem'
+        }
+
+
+        // Creating Elements
+        const ul = document.querySelector('ul')
+        const li = document.createElement('li')
+        // Adding the elements
+        ul.append(li)
+        // Modifying the text
+        
+
+
+
+    </script>
+</body>
+</html>

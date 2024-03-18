@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heading">Favourite Movie Franchise</h1>
+        <ul>
+            <li class="list-items">The Matrix</li>
+            <li class="list-items">Stars Wars</li>
+            <li class="list-items">Harry Potter</li>
+            <li class="list-items">Lord of the Rings</li>
+            <li class="list-items">Marvel</li>
+        </ul>
+    </div>
+
+
+    <script>
+        // GetElementById
+        const element = document.getElementById('main-heading');
+        console.log(element);
+
+        // GetElementByClassName
+        const element2 = document.getElementsByClassName('list-items')
+        console.log(element2);
+
+        // GetElementByTagName
+        const element3 = document.getElementsByTagName('li')
+        console.log(element3);
+
+        // querySelector() - Returns the first item 
+        const element4 = document.querySelector('.list-items');
+        console.log(element4);
+
+        // querySelectorAll()
+        const element5 = document.querySelectorAll('.list-items')
+        console.log(element5);
+
+    </script>
+</body>
+</html>
