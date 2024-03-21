@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <script>
+        
+        // console.log(randValue);
+        const element = document.querySelectorAll(".box")
+
+        element.forEach(element =>{
+            let randValue = Math.floor(Math.random()*10);
+
+            if (randValue>=0 && randValue < 4){
+                element.style.color = "red"
+                element.style.backgroundColor = "blue"
+            }
+            else if(randValue >= 4 && randValue < 7){
+                element.style.color = "black"
+                element.style.backgroundColor = "white"
+            }
+            else{
+                element.style.color = "purple"
+                element.style.backgroundColor = "green"
+            }
+        });
+        
+
+    </script>
+</body>
+</html>
