@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <p id="demo0"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // getElementsByTagName returns an HTML Collection object which is an array like list (NOT ARRAY!!)
+        // However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.
+        const element = document.getElementsByTagName('p')
+        document.getElementById('demo0').innerHTML = "The text inside first paragraph is: " + element[0].innerHTML
+        document.getElementById('demo1').innerHTML = "The text inside second paragraph is: " + element[1].innerHTML
+
+        // Length property - Can be used when looping
+        document.getElementById('demo2').innerHTML = "There are " + element.length + " paragraphs in this file"
+    </script>
+</body>
+</html>
