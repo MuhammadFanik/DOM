@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Main Heading</h1>
+    <p>Click on the button to add paragraphs</p>
+    <button id="btn">Click Me to see different paragraphs</button>
+
+    <script>
+        let button = document.querySelector('#btn');
+
+        function addParagraph(){
+            let randomNumber = Math.floor((Math.random()) * 100);
+            let message = "Random message " + randomNumber
+
+            // This creates a new p element
+            const para = document.createElement('p');
+
+            // Now create a text node
+            const textNode = document.createTextNode(message);
+
+            // Append this text node inside the paragraph tag
+            para.append(textNode)
+
+            // This code finds an existing element
+            let main = document.querySelector('body')
+            main.append(para)
+        }
+
+        button.addEventListener('click', addParagraph)
+    </script>
+</body>
+</html>

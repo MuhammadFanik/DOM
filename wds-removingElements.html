@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <span id="hi">Hi</span>
+        <span id="bye">Bye</span>
+    </div>
+
+    <script>
+        const div = document.querySelector('#div')
+        const hi = document.querySelector('#hi')
+        const bye = document.querySelector('#bye')
+
+        // to remove bye
+        // hi.remove()
+
+        // another way is to remove them from the parent
+        div.removeChild(hi)
+    </script>
+
+</body>
+</html>

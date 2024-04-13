@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        #bulb{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            /* background-color: yellow; */
+        }
+        button{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="bulb">
+
+    </div>
+    <button>Click Me</button>
+
+
+    <script>
+        const button = document.querySelector("button");
+        let bulb = document.querySelector("#bulb");
+        let flag = 0;
+
+        function on(){
+            if (flag === 0){
+                bulb.style.backgroundColor = "yellow"
+                let buttonText = document.querySelector("button").innerHTML = "OFF"
+                flag = 1;
+            } else{
+                bulb.style.backgroundColor = "transparent"
+                let buttonText = document.querySelector("button").innerHTML = "ON"
+                flag = 0;
+            }
+            
+        }
+        button.addEventListener('click', on)
+
+    </script>
+</body>
+</html>
